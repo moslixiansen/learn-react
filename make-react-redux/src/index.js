@@ -1,8 +1,8 @@
 
 import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
-import Header from './Header'
-import Content from './Content'
+import Header from './containers/Header'
+import Content from './containers/Content'
 import { Provider } from './react-redux'
 
 

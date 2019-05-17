@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import ThemeSwitch from './ThemeSwitch'
-import { connect } from './react-redux'
-
+import ThemeSwitch from '../containers/ThemeSwitch'
 
 class Content extends Component {
     static propTypes = {
@@ -19,6 +17,4 @@ class Content extends Component {
     }
 }
 
-const mapStateToProps = state => ({themeColor: state.themeColor})
-
-export default connect(mapStateToProps)(Content)
+export default Content
