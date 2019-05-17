@@ -7,9 +7,7 @@ import { Provider } from './react-redux'
 
 
 function themeReducer(state, action) {
-    debugger
     if (!state) {
-        debugger
         return {
             themeColor: 'blue',
         }
@@ -17,13 +15,11 @@ function themeReducer(state, action) {
 
     switch (action.type) {
         case 'SWITCH_THEME_COLOR':
-            debugger
             return {
                 ...state,
                 themeColor: action.color,
             }
             default:
-                debugger
                 return state
     }
 }
@@ -34,9 +30,7 @@ function createStore (reducer) {
     const getState = () => state
     const subscribe = (listener) => listeners.push(listener)
     const dispatch = (action) => {
-        debugger
         state = reducer(state, action)
-        debugger
         listeners.forEach(listener => listener())
     }
     dispatch({})

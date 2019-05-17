@@ -9,9 +9,7 @@ class ThemeSwitch extends Component {
     }
 
     handleSwitchColor (color) {
-        debugger
         if (this.props.onSwitch) {
-            debugger
             this.props.onSwitch(color)
         }
     }
@@ -30,7 +28,6 @@ const mapStateToProps = state => ({themeColor: state.themeColor})
 
 const mapDispatchToProps = dispatch => ({
         onSwitch: (color) => {
-            debugger
              dispatch({
                 type: 'SWITCH_THEME_COLOR',
                 color: color
